@@ -10,6 +10,7 @@
 <body>
     <h1>Welcome! </h1>
 
-    <a href="/chap02/dancer/register">댄서 등록하러 가보자!!!</a>
+    <a href="/chap02/dancer/register">댄서 등록(서블릿버전)</a> <br>
+    <a href="/chap03/dancer/register.jsp">댄서 등록(jsp버전)</a> <br>
 </body>
 </html>

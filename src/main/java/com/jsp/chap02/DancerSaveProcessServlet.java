@@ -66,7 +66,7 @@ public class DancerSaveProcessServlet extends HttpServlet {
         w.write("</head>\n");
         w.write("<body>\n");
 
-        w.write("<h1>" + dancer.getName() + "님이 등록되었습니다. </h1>");
+        w.write("<h1>" + dancer.getName() + "님이 등록되었습니다." + " </h1>");
         w.write("<a href=\"/chap02/dancer/show-list\">댄서 정보 모아보기</a>");
 
         w.write("</body>\n");

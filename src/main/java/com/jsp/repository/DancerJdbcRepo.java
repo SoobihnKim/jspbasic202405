@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-CREATE TABLE tbl_dancer (
+    CREATE TABLE tbl_dancer (
 	id INT(8) PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
     crew_name VARCHAR(255),
     dance_level VARCHAR(50)
-);
+    );
 
  */
 

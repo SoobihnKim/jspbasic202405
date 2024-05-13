@@ -3,6 +3,7 @@ package com.jsp.chap04;
 import com.jsp.entity.Dancer;
 import com.jsp.repository.DancerJdbcRepo;
 import com.jsp.repository.DancerMemoryRepo;
+import com.jsp.repository.DancerRepository;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,7 +20,14 @@ import java.util.List;
 public class ShowDancerListServlet extends HttpServlet {
     
 //    private DancerMemoryRepo repo = DancerMemoryRepo.getInstance();
-    private DancerJdbcRepo repo = DancerJdbcRepo.getInstance();
+//    private DancerJdbcRepo repo = DancerJdbcRepo.getInstance();
+
+    // OCP (Open-Closed Principle): 개방-폐쇄 원칙
+    private DancerRepository repo;
+
+    public ShowDancerListServlet(DancerRepository repo) {
+        this.repo = repo;
+    }
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

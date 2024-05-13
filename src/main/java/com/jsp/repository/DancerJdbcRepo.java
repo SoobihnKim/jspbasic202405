@@ -22,7 +22,7 @@ import java.util.List;
 
 // 역할: 실제 데이터베이스에 댄서들을 CRUD
 // Model
-public class DancerJdbcRepo {
+public class DancerJdbcRepo implements DancerRepository {
 
     private static DancerJdbcRepo repo = new DancerJdbcRepo();
 

@@ -1,13 +1,17 @@
 package com.jsp.chap04;
 
+import com.jsp.entity.Dancer;
 import com.jsp.repository.DancerJdbcRepo;
+import jdk.dynalink.linker.LinkerServices;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/chap04/remove")
 public class DancerRemoveServlet extends HttpServlet {
@@ -27,6 +31,16 @@ public class DancerRemoveServlet extends HttpServlet {
 
         // 데이터베이스에 삭제 명령
         repo.delete(id);
+
+//        List<Dancer> dancerList = repo.retrieve();
+//        req.setAttribute("dancers", dancerList);
+//
+//        // 적절한 화면 이동
+//        RequestDispatcher dp = req.getRequestDispatcher("/WEB-INF/chap04/dancer-list.jsp");
+//        dp.forward(req, resp);
+
+        // /chap04/show-list 요청을 자동으로 보냄(리다이렉션)
+        resp.sendRedirect("/chap04/show-list");
 
     }
 }
